@@ -1,0 +1,91 @@
+#kosovo-gov-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+#kosovo-gov-banner.kosovo-official {
+  background: #002b7f;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+#kosovo-gov-banner.kosovo-warning {
+  background: #a00000;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+#kosovo-gov-banner .kg-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 auto;
+}
+
+#kosovo-gov-banner img.kg-flag {
+  width: 26px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+#kosovo-gov-banner .kg-text {
+  text-align: left;
+  font-size: 14px;
+}
+
+#kosovo-gov-banner .kg-text strong {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#kosovo-gov-banner .kg-controls {
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+#kosovo-gov-banner .kg-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+#kosovo-gov-banner .kg-close:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+body.kg-banner-active {
+  margin-top: 56px !important;
+}
+
+@media (max-width: 520px) {
+  #kosovo-gov-banner {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  #kosovo-gov-banner .kg-text strong {
+    font-size: 14px;
+  }
+
+  body.kg-banner-active {
+    margin-top: 72px !important;
+  }
+}

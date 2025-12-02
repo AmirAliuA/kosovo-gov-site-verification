@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "Kosovo Government Site Verification",
+  "description": "A lightweight browser extension that verifies whether the website you are visiting belongs to an official government domain of the Republic of Kosovo.",
+  "version": "1.0",
+  "author": "Amir Aliu",
+  "homepage_url": "https://github.com/AmirAliuA/kosovo-gov-site-verification",
+  "offline_enabled": true,
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://kryeministri.rks-gov.net/*",
+        "*://*.kryeministri.rks-gov.net/*",
+        "*://gzk.rks-gov.net/*",
+        "*://*.gzk.rks-gov.net/*",
+        "*://ekosova.rks-gov.net/*",
+        "*://*.ekosova.rks-gov.net/*",
+        "*://mpb.rks-gov.net/*",
+        "*://*.mpb.rks-gov.net/*",
+        "*://md.rks-gov.net/*",
+        "*://*.md.rks-gov.net/*",
+        "*://mf.rks-gov.net/*",
+        "*://*.mf.rks-gov.net/*",
+        "*://masht.rks-gov.net/*",
+        "*://*.masht.rks-gov.net/*",
+        "*://ask.rks-gov.net/*",
+        "*://*.ask.rks-gov.net/*",
+        "*://aapsk.rks-gov.net/*",
+        "*://*.aapsk.rks-gov.net/*",
+        "*://ipk.rks-gov.net/*",
+        "*://*.ipk.rks-gov.net/*",
+        "*://cons.rks-gov.net/*",
+        "*://*.cons.rks-gov.net/*",
+        "*://rks-gov.net/*",
+        "*://*.rks-gov.net/*",
+        "*://ks-gov.net/*",
+        "*://*.ks-gov.net/*",
+        "*://mfa-ks.net/*",
+        "*://*.mfa-ks.net/*",
+        "*://kosovopolice.com/*",
+        "*://*.kosovopolice.com/*",
+        "*://fsk-rks.org/*",
+        "*://*.fsk-rks.org/*"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "css": [
+        "banner.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ]
+}
