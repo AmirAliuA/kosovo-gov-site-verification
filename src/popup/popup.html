@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kosovo Gov Checker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="popup-root" role="dialog" aria-label="Kosovo Government Domain Checker">
+    <header class="popup-header">
+      <img src="icons/kosovo-flag.png" class="flag" alt="Kosovo flag" />
+      <h1 id="title" class="title"></h1>
+    </header>
+
+    <main class="popup-main">
+      <div id="domainStatus" class="status-box" aria-live="polite">
+        <span id="statusText"></span>
+      </div>
+
+      <button id="checkBtn" class="btn" type="button" aria-pressed="false"></button>
+
+      <a id="sourceLink" class="source-link" href="https://github.com/AmirAliuA/kosovo-gov-site-verification"
+        target="_blank" rel="noopener">View Source Code</a>
+
+      <p id="disclaimer" class="disclaimer"></p>
+    </main>
+
+    <footer class="popup-footer">
+      <label class="auto-check">
+        <input id="autocheckToggle" type="checkbox" checked />
+        Auto-check on open
+      </label>
+    </footer>
+  </div>
+
+  <script src="popup.js" defer></script>
+</body>
+</html>
